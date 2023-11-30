@@ -5,9 +5,14 @@
 {% endblock %}
 
 {% block main %}
-    <div class="mb-3 container">
-        <p class="text-start fs-4">
-            <span class="fw-bold">Account balance:</span>
-        </p>
-    </div>
+    {% if username %}
+        <div class="mb-3 container">
+            <p class="text-start fs-4">
+                <span class="fw-bold">Account balance:</span>
+            </p>
+        </div>
+    {% else %}
+        
+        <p>You are not an user please click <a href="/register">register</a> to signup</p>
+    {% endif %}
 {% endblock %}
